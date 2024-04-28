@@ -8,7 +8,7 @@ def initialize():
     if not st.session_state.get('already_executed', False):
         setup_database()  # 调用设置数据库的函数
         st.session_state['already_executed'] = True  # 设置状态为 True，表示已初始化
-        print("数据库初始化设置已完成。")
+        #print("数据库初始化设置已完成。")
 
 
 def setup_database():
