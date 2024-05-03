@@ -4,10 +4,10 @@ import chromadb
 import pandas as pd
 
 def initialize():
-    # 检查 'already_executed' 状态，确保不重复初始化数据库
+    # check 'already_executed' status，make sure the data not initialize again
     if not st.session_state.get('already_executed', False):
-        setup_database()  # 调用设置数据库的函数
-        st.session_state['already_executed'] = True  # 设置状态为 True，表示已初始化
+        setup_database()  # setup database
+        st.session_state['already_executed'] = True  # True for initialize
 
 
 def setup_database():
@@ -22,7 +22,7 @@ def setup_database():
 
     st.session_state['already_executed'] = True
     st.session_state['collection'] = collection
-    #st.write("已将 already_executed 设置为 True")
+    #st.write("already set already_executed = True")
 
 def main():
     st.title("LLM+RAG test")
